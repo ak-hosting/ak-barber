@@ -1,0 +1,89 @@
+# AK Barber - Docker Ignore Dosyası
+# Geliştirici: a.koc (https://github.com/ak-hosting)
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+docker/
+
+# Environment files
+.env
+.env.*
+env.example
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Build files
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Documentation
+README.md
+LICENSE
+CHANGELOG.md
+
+# Development files
+package.json
+package-lock.json
+yarn.lock
+.eslintrc*
+.prettierrc*
+.stylelintrc*
+
+# Testing
+coverage/
+.nyc_output/
+test/
+tests/
+
+# Backup files
+*.bak
+*.backup
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+
+# Database files
+*.db
+*.sqlite
+
+# SSL certificates
+*.pem
+*.key
+*.crt 

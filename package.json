@@ -1,0 +1,71 @@
+{
+  "name": "ak-barber",
+  "version": "1.0.0",
+  "description": "Profesyonel berber salonu web sitesi - Modern, responsive ve optimize edilmiş tasarım",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "dev": "live-server --port=8000",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "postcss assets/css/style.css -o assets/css/style.min.css",
+    "build:js": "terser assets/js/script.js -o assets/js/script.min.js",
+    "lint": "eslint assets/js/script.js",
+    "lint:css": "stylelint assets/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "berber",
+    "salon",
+    "web-site",
+    "responsive",
+    "bootstrap",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": {
+    "name": "a.koc",
+    "email": "ak@ak-pro.com",
+    "url": "https://github.com/ak-hosting"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ak-hosting/ak-barber.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ak-hosting/ak-barber/issues"
+  },
+  "homepage": "https://github.com/ak-hosting/ak-barber#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.0.0",
+    "postcss-preset-env": "^8.0.0",
+    "serve": "^14.0.0",
+    "stylelint": "^15.0.0",
+    "terser": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 3,
+        "features": {
+          "nesting-rules": true,
+          "custom-properties": true,
+          "custom-media-queries": true
+        }
+      }
+    }
+  }
+} 

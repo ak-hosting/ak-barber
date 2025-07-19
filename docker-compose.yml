@@ -1,0 +1,78 @@
+# AK Barber - Docker Compose Yapılandırması
+# Geliştirici: a.koc (https://github.com/ak-hosting)
+
+# Docker Compose version bilgisi kaldırıldı (artık gerekli değil)
+
+services:
+  ak-barber:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_DATE: ${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')}
+        VCS_REF: ${VCS_REF:-$(git rev-parse --short HEAD 2>/dev/null || echo 'unknown')}
+    container_name: ak-barber-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    volumes:
+      # Logs
+      - ./logs/nginx:/var/log/nginx
+      # Optional: Development için source code mount
+      # - .:/usr/share/nginx/html:ro
+    networks:
+      - ak-barber-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ak-barber.rule=Host(`localhost`)"
+      - "traefik.http.services.ak-barber.loadbalancer.server.port=80"
+      - "traefik.docker.network=ak-barber-network"
+
+  # Optional: Redis cache (future use)
+  # redis:
+  #   image: redis:alpine
+  #   container_name: ak-barber-redis
+  #   restart: unless-stopped
+  #   ports:
+  #   - "6379:6379"
+  #   volumes:
+  #   - redis_data:/data
+  #   networks:
+  #   - ak-barber-network
+  #   command: redis-server --appendonly yes
+
+  # Optional: PostgreSQL database (future use)
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: ak-barber-db
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_DB: akbarber
+  #     POSTGRES_USER: akbarber
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-secure_password}
+  #   ports:
+  #   - "5432:5432"
+  #   volumes:
+  #   - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #   - ak-barber-network
+
+networks:
+  ak-barber-network:
+    driver: bridge
+    name: ak-barber-network
+
+volumes:
+  # redis_data:
+  # postgres_data:
+  nginx_logs:
+    driver: local 
