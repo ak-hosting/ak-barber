@@ -22,8 +22,42 @@ SOFTWARE.
 
 ---
 
-Geliştirici: a.koc
-GitHub: https://github.com/ak-hosting
-E-posta: ak@ak-pro.com
+## 📋 Geliştirici Bilgileri
 
-Bu proje eğitim amaçlı oluşturulmuştur. Ticari kullanım için gerekli lisansları kontrol edin. 
+**Geliştirici**: a.koc  
+**GitHub**: https://github.com/ak-hosting  
+**E-posta**: ak@ak-pro.com  
+**Web Sitesi**: https://ak-pro.com  
+
+## 🛡️ Yasal Uyarılar
+
+Bu proje eğitim amaçlı oluşturulmuştur. Ticari kullanım için gerekli lisansları kontrol edin.
+
+### 📦 Kullanılan Teknolojiler ve Lisansları:
+
+1. **Bootstrap 5** - MIT License
+   - Kaynak: https://getbootstrap.com/
+   - Lisans: https://github.com/twbs/bootstrap/blob/main/LICENSE
+
+2. **Font Awesome** - MIT License
+   - Kaynak: https://fontawesome.com/
+   - Lisans: https://fontawesome.com/license
+
+3. **Google Fonts** - Apache License 2.0
+   - Kaynak: https://fonts.google.com/
+   - Lisans: https://github.com/google/fonts/blob/main/LICENSE
+
+4. **Unsplash Görselleri** - Unsplash License
+   - Kaynak: https://unsplash.com/
+   - Lisans: https://unsplash.com/license
+
+### 📞 İletişim
+
+Yardım veya özel istekler için:
+- **E-posta**: ak@ak-pro.com
+- **GitHub**: https://github.com/ak-hosting
+- **Web Sitesi**: https://ak-pro.com
+
+### 💰 Ücretli Hizmetler
+
+Değişiklikler ya da özel istekler, ücret karşılığında gerçekleştirilecektir. 

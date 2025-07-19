@@ -1,6 +1,17 @@
 # AK Barber - Profesyonel Berber Salonu Web Sitesi
 
-Modern, responsive ve optimize edilmiş bir berber salonu web sitesi. Bootstrap 5, HTML5, CSS3 ve JavaScript kullanılarak geliştirilmiştir.
+<div align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+</div>
+
+<div align="center">
+  <h3>🚀 Modern, responsive ve optimize edilmiş berber salonu web sitesi</h3>
+  <p>Bootstrap 5, HTML5, CSS3 ve JavaScript kullanılarak geliştirilmiştir.</p>
+</div>
 
 ## 🚀 Özellikler
 
@@ -128,19 +139,33 @@ Site tüm cihazlarda mükemmel görünür:
 - **Font Awesome**: İkonlar
 - **Google Fonts**: Typography
 
-## 📞 Destek
+## 📞 Destek & İletişim
 
 Yardım veya özel istekler için:
 - **E-posta**: ak@ak-pro.com
 - **GitHub**: https://github.com/ak-hosting
+- **Web Sitesi**: https://ak-pro.com
 
-## 📄 Lisans
+## 📄 Lisans & Yasal Bilgiler
 
 Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+
+### 🛡️ Yasal Uyarılar:
+- Bu proje eğitim amaçlı oluşturulmuştur
+- Ticari kullanım için gerekli lisansları kontrol edin
+- Görseller Unsplash'ten alınmıştır (ticari kullanıma uygun)
+- Font Awesome ikonları kullanılmıştır
+- Bootstrap 5 framework'ü kullanılmıştır
 
 ## 👨‍💻 Geliştirici
 
 **a.koc** - https://github.com/ak-hosting
+
+### 📋 Geliştirici Bilgileri:
+- **Ad Soyad**: a.koc
+- **GitHub**: https://github.com/ak-hosting
+- **E-posta**: ak@ak-pro.com
+- **Web Sitesi**: https://ak-pro.com
 
 ## 🔄 Güncellemeler
 
