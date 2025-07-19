@@ -9,19 +9,40 @@
 </div>
 
 <div align="center">
-  <h3>🚀 Modern, responsive ve optimize edilmiş berber salonu web sitesi</h3>
-  <p>Bootstrap 5, HTML5, CSS3 ve JavaScript kullanılarak geliştirilmiştir.</p>
+  <h1>✂️ AK Barber - Profesyonel Berber Salonu Web Sitesi</h1>
+  <p><strong>Modern, responsive ve SEO dostu berber salonu web sitesi</strong></p>
+  <p>Bootstrap 5, HTML5, CSS3 ve JavaScript ile geliştirildi. Ücretsiz olarak indirin ve kendi işletmenize göre özelleştirin!</p>
+  
+  <a href="https://ak-hosting.github.io/ak-barber/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐-Canlı_Demo-2ea44f?style=for-the-badge&logo=github" alt="Canlı Demo">
+  </a>
+  <a href="mailto:ak@ak-pro.com">
+    <img src="https://img.shields.io/badge/📧-Destek-blue?style=for-the-badge&logo=gmail" alt="Destek">
+  </a>
+  <a href="https://github.com/ak-hosting/ak-barber/issues">
+    <img src="https://img.shields.io/badge/🐛-Hata_Bildir-red?style=for-the-badge&logo=github" alt="Hata Bildir">
+  </a>
+</div>
+
+## 📸 Ekran Görüntüleri
+
+<div align="center">
+  <img src="assets/images/screenshot-homepage.png" alt="Ana Sayfa" width="400">
+  <img src="assets/images/screenshot-services.png" alt="Hizmetler" width="400">
+  <img src="assets/images/screenshot-contact.png" alt="İletişim" width="400">
 </div>
 
 ## 🚀 Özellikler
 
-- **Modern Tasarım**: Bootstrap 5 ile responsive tasarım
-- **Hızlı Yükleme**: Optimize edilmiş görseller ve kod
-- **İletişim Formu**: Çalışan iletişim formu
-- **Galeri**: Lightbox özellikli galeri
-- **Animasyonlar**: Smooth scroll ve CSS animasyonları
-- **SEO Optimized**: Meta etiketleri ve yapılandırılmış veri
-- **Mobile First**: Tüm cihazlarda mükemmel görünüm
+- **🎨 Modern Tasarım**: Bootstrap 5 ile tamamen responsive tasarım
+- **⚡ Hızlı Yükleme**: Optimize edilmiş görseller ve kod
+- **📧 İletişim Formu**: SMTP entegrasyonu ile çalışan form
+- **🖼️ Galeri**: Lightbox özellikli görsel galeri
+- **🎭 Animasyonlar**: Smooth scroll ve CSS animasyonları
+- **🔍 SEO Optimize**: Meta etiketleri ve yapılandırılmış veri
+- **📱 Mobile First**: Tüm cihazlarda kusursuz deneyim
+- **🐳 Docker Desteği**: Kolay kurulum ve deployment
+- **🛡️ Güvenlik**: CSP başlıkları ve güvenlik önlemleri
 
 ## 📁 Proje Yapısı
 
@@ -38,24 +59,54 @@ ak_barber/
 └── LICENSE                 # Lisans dosyası
 ```
 
-## 🛠️ Kurulum
+## 🚀 Hızlı Başlangıç
 
-1. **Projeyi klonlayın:**
+### Yöntem 1: Docker ile (Önerilen)
+```bash
+# 1. Projeyi klonlayın
+git clone https://github.com/ak-hosting/ak-barber.git
+cd ak-barber
+
+# 2. Docker ile başlatın
+docker-compose up -d
+
+# 3. Tarayıcınızda açın
+open http://localhost:8080
+```
+
+### Yöntem 2: Manuel Kurulum
+```bash
+# 1. Projeyi klonlayın
+git clone https://github.com/ak-hosting/ak-barber.git
+cd ak-barber
+
+# 2. Basit HTTP sunucusu başlatın
+python3 -m http.server 8000
+# veya
+npx serve .
+
+# 3. Tarayıcınızda açın
+open http://localhost:8000
+```
+
+## 🛠️ Detaylı Kurulum
+
+### 1. **Projeyi klonlayın:**
    ```bash
    git clone https://github.com/ak-hosting/ak-barber.git
    cd ak-barber
    ```
 
-2. **Dosyaları düzenleyin:**
+### 2. **Dosyaları düzenleyin:**
    - `index.html` dosyasındaki içerikleri kendi işletmenize göre güncelleyin
    - `assets/css/style.css` dosyasındaki renkleri ve stilleri özelleştirin
    - Görselleri kendi görsellerinizle değiştirin
 
-3. **E-posta yapılandırması:**
+### 3. **E-posta yapılandırması:**
    - `.env.example` dosyasını `.env` olarak kopyalayın
    - E-posta ayarlarınızı yapılandırın
 
-4. **Web sunucusunda çalıştırın:**
+### 4. **Web sunucusunda çalıştırın:**
    ```bash
    # Python ile basit sunucu
    python -m http.server 8000
@@ -67,10 +118,16 @@ ak_barber/
    php -S localhost:8000
    ```
 
-## 📧 E-posta Yapılandırması
+## 📧 İletişim Formu Kurulumu
 
-İletişim formunun çalışması için e-posta yapılandırması gereklidir. `.env.example` dosyasını `.env` olarak kopyalayın ve aşağıdaki ayarları yapın:
+İletişim formunun çalışması için SMTP yapılandırması gereklidir:
 
+### 1. **Dosyayı kopyalayın:**
+```bash
+cp .env.example .env
+```
+
+### 2. **SMTP ayarlarınızı girin:**
 ```env
 # SMTP Ayarları
 SMTP_HOST=smtp.gmail.com
@@ -82,6 +139,15 @@ SMTP_PASS=your-app-password
 FROM_EMAIL=your-email@gmail.com
 TO_EMAIL=info@yourbusiness.com
 ```
+
+### 3. **Gmail App Password oluşturun:**
+1. [Google Hesap Güvenliği](https://myaccount.google.com/security) sayfasına gidin
+2. "2 Adımlı Doğrulama"yı etkinleştirin
+3. "Uygulama Şifreleri" bölümünden yeni şifre oluşturun
+4. Bu şifreyi `SMTP_PASS` alanına yazın
+
+### 4. **Test edin:**
+Form gönderdikten sonra e-posta alıp almadığınızı kontrol edin.
 
 ## 🎨 Özelleştirme
 
@@ -139,12 +205,31 @@ Site tüm cihazlarda mükemmel görünür:
 - **Font Awesome**: İkonlar
 - **Google Fonts**: Typography
 
+## 📜 Kredi ve Atıf
+
+Bu projeyi kullanıyorsanız, lütfen sitenizin footer kısmında veya uygun bir alanda şu şekilde atıf yapın:
+
+```html
+Geliştirici: a.koc - https://github.com/ak-hosting
+```
+
 ## 📞 Destek & İletişim
 
-Yardım veya özel istekler için:
-- **E-posta**: ak@ak-pro.com
-- **GitHub**: https://github.com/ak-hosting
-- **Web Sitesi**: https://ak-pro.com
+### 🆘 Yardım mı lazım?
+- **📧 E-posta**: ak@ak-pro.com
+- **🐙 GitHub**: https://github.com/ak-hosting
+- **🌐 Web Sitesi**: https://ak-pro.com
+- **🐛 Hata Bildirimi**: https://github.com/ak-hosting/ak-barber/issues
+
+### 💰 Ücretli Hizmetler
+Özel istekler ve özelleştirmeler ücretli olarak gerçekleştirilir:
+- Özel tasarım değişiklikleri
+- Yeni özellikler ekleme
+- SEO optimizasyonu
+- Hosting ve domain kurulumu
+- Teknik destek
+
+**💡 İletişime geçin**: ak@ak-pro.com
 
 ## 📄 Lisans & Yasal Bilgiler
 
@@ -192,6 +277,28 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 - ✅ Galeri özelliği
 - ✅ Animasyonlar
 - ✅ SEO optimizasyonu
+
+---
+
+## ❓ Sıkça Sorulan Sorular
+
+### Q: İletişim formu çalışmıyor, ne yapmalıyım?
+A: `.env` dosyasındaki SMTP ayarlarını kontrol edin ve geçerli bir uygulama şifresi kullandığınızdan emin olun.
+
+### Q: Görseller yüklenmiyor, sorun nedir?
+A: Görsel yollarının `index.html` içinde doğru olduğundan emin olun.
+
+### Q: Site responsive değil, ne yapmalıyım?
+A: Bootstrap 5 kullanıldığı için otomatik olarak responsive olmalı. Tarayıcı cache'ini temizleyin.
+
+### Q: Docker ile nasıl çalıştırırım?
+A: `docker-compose up -d` komutu ile başlatabilirsiniz.
+
+### Q: Özelleştirme nasıl yapılır?
+A: `assets/css/style.css` dosyasındaki CSS değişkenlerini değiştirin.
+
+### Q: Ücretli hizmetler nelerdir?
+A: Özel tasarım, yeni özellikler ve teknik destek ücretli olarak sunulur.
 
 ---
 
